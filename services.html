@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services | AutoHub Harare</title>
+  <meta name="description" content="Body kits, detailing, panel beating and respray, car wrapping, interiors, mag wheels, bucket seats, steering wheels, engine enhancement, car security and dash cameras in Borrowdale, Harare.">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="icon" href="images/logo.png">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    /* Set theme before paint to avoid a flash */
+    (function () {
+      try {
+        var saved = localStorage.getItem("autohubTheme");
+        var prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+        document.documentElement.setAttribute("data-theme", saved || (prefersLight ? "light" : "dark"));
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <div class="wipe" id="wipe" aria-hidden="true"><span class="wipemark"><b>A</b><img class="wipelogo" src="images/logo.png" alt="" onload="this.parentNode.classList.add('hasimg')" onerror="this.remove()"></span></div>
+<a class="skip" href="#main">Skip to content</a>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="header" id="header">
+    <div class="wrap headerrow">
+      <a class="brand" href="index.html" aria-label="AutoHub home">
+        <span class="brandmark" aria-hidden="true"><b>A</b><img class="brandlogo logod" src="images/logo.png" alt="" width="168" height="40" onload="this.parentNode.classList.add('hasimg')" onerror="this.remove()"><img class="brandlogo logol" src="images/logo-light.png" alt="" width="168" height="40" onload="this.parentNode.classList.add('hasimg')" onerror="this.remove()"></span>
+        <span class="brandtext"><strong>AUTOHUB</strong><small>Everything Automotive</small></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Main navigation">
+        <a href="index.html" class="navlink">Home</a>
+        <a href="services.html" class="navlink">Services</a>
+        <a href="bodykits.html" class="navlink">Body Kits</a>
+        <a href="products.html" class="navlink">Products</a>
+        <a href="shipping.html" class="navlink">Shipping</a>
+        <a href="about.html" class="navlink">About</a>
+        <a href="contact.html" class="navlink navcta">Get a Quote</a>
+      </nav>
+
+      <div class="headeractions">
+        <a class="iconbtn adminlink" href="admin.html" aria-label="Admin dashboard" title="Admin dashboard">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/>
+            <path d="M9 12l2 2 4-4"/>
+          </svg>
+        </a>
+        <button class="iconbtn" id="themeToggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
+          <svg class="iconsun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="iconmoon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <button class="iconbtn burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="pagehero ph-paint">
+      <div class="wrap">
+        <p class="eyebrow reveal">What we do</p>
+        <h1 class="reveal">Our Services</h1>
+        <p class="lead reveal">Automotive enhancement, appearance and security services to help you customize, restore and protect your vehicle.</p>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="wrap">
+        <header class="sechead reveal">
+          <p class="eyebrow">What we do</p>
+          <h2>Our Services</h2>
+          <p>Automotive enhancement and appearance services to help you customize, restore and refresh your vehicle.</p>
+        </header>
+
+        <div class="filters reveal" role="group" aria-label="Filter services">
+          <button class="chip active" type="button" data-filter="all">All</button>
+          <button class="chip" type="button" data-filter="exterior">Exterior</button>
+          <button class="chip" type="button" data-filter="interior">Interior</button>
+          <button class="chip" type="button" data-filter="finish">Paint and finish</button>
+          <button class="chip" type="button" data-filter="tech">Performance and security</button>
+        </div>
+
+        <div class="cards" id="cards">
+          <article class="card reveal" data-cat="exterior">
+            <span class="cardnum">01</span>
+            <svg viewBox="0 0 48 48" width="44" height="44" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 30l4-10a4 4 0 0 1 4-3h24a4 4 0 0 1 4 3l4 10v6H4z"/><circle cx="14" cy="36" r="4"/><circle cx="34" cy="36" r="4"/><path d="M4 30h40"/></svg>
+            <h3>Car Body Kits and Pimping</h3>
+            <p>Exterior styling and personalization to give vehicles a distinctive, upgraded look.</p>
+          </article>
+          <article class="card reveal" data-cat="finish">
+            <span class="cardnum">02</span>
+            <svg viewBox="0 0 48 48" width="44" height="44" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 6l3.5 9.5L37 19l-9.5 3.5L24 32l-3.5-9.5L11 19l9.5-3.5z"/><path d="M38 30l1.5 4 4 1.5-4 1.5L38 41l-1.5-4-4-1.5 4-1.5z"/></svg>
+            <h3>Detailing</h3>
+            <p>Exterior wash and detail, paint correction, ceramic coating, interior detailing and engine bay care.</p>
+          </article>
+          <article class="card reveal" data-cat="finish">
+            <span class="cardnum">03</span>
+            <svg viewBox="0 0 48 48" width="44" height="44" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 8h26v10H8z"/><path d="M34 13h6v12H24v6"/><rect x="20" y="31" width="8" height="11" rx="2"/></svg>
+            <h3>Panel Beating and Respray</h3>
+            <p>Accident repairs, dent removal, spray painting and frame straightening for a factory finish.</p>
+          </article>
+          <article class="card reveal" data-cat="exterior">
+            <span class="cardnum">04</span>
+            <svg viewBox="0 0 48 48" width="44" height="44" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 14h30a6 6 0 0 1 0 12H14a6 6 0 0 0 0 12h28"/><path d="M38 34l4 4-4 4"/></svg>
+            <h3>Car Wrapping</h3>
+            <p>Premium vinyl wraps in matte, gloss, satin, chrome and textured finishes, plus paint protection film.</p>
+          </article>
+          <article class="card reveal" data-cat="interior">
+            <span class="cardnum">05</span>
+            <svg viewBox="0 0 48 48" width="44" height="44" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8h14a6 6 0 0 1 6 6v14H18a6 6 0 0 1-6-6z"/><path d="M18 28v10h22V28"/><path d="M12 38h30"/></svg>
+            <h3>Interior Rejuvenation</h3>
+            <p>Interior refresh services focused on improving the look and feel of cabin surfaces and trim.</p>
+          </article>
+          <article class="card reveal" data-cat="exterior">
+            <span class="cardnum">06</span>
+            <svg viewBox="0 0 48 48" width="44" height="44" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="18"/><circle cx="24" cy="24" r="4"/><path d="M24 6v14M24 28v14M6 24h14M28 24h14M11 11l10 10M27 27l10 10M37 11L27 21M21 27L11 37"/></svg>
+            <h3>Mag Wheels</h3>
+            <p>Alloy wheel styles in a wide variety of finishes, with supply and fitment available.</p>
+          </article>
+          <article class="card reveal" data-cat="interior">
+            <span class="cardnum">07</span>
+            <svg viewBox="0 0 48 48" width="44" height="44" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 5h11a5 5 0 0 1 5 5l2 19H14z"/><path d="M12 29h24v8H12z"/><path d="M18 37v6M30 37v6"/></svg>
+            <h3>Bucket Seats</h3>
+            <p>Sporty bucket seats in eight colour combinations, with supply and fitment available.</p>
+          </article>
+          <article class="card reveal" data-cat="interior">
+            <span class="cardnum">08</span>
+            <svg viewBox="0 0 48 48" width="44" height="44" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="18"/><circle cx="24" cy="24" r="4"/><path d="M6 24h14M28 24h14M24 28v14"/></svg>
+            <h3>Steering Wheels</h3>
+            <p>Custom steering wheels in Alcantara, leather and carbon fibre for a sportier interior.</p>
+          </article>
+          <article class="card reveal" data-cat="tech">
+            <span class="cardnum">09</span>
+            <svg viewBox="0 0 48 48" width="44" height="44" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 18h6l3-4h10l3 4h6v14H10z"/><path d="M4 22v6M44 22v6M18 8v6M30 8v6M16 38v4M32 38v4"/></svg>
+            <h3>Engine Enhancement</h3>
+            <p>More power, better efficiency and a smoother drive through tuning, remapping and upgrades.</p>
+          </article>
+          <article class="card reveal" data-cat="tech">
+            <span class="cardnum">10</span>
+            <svg viewBox="0 0 48 48" width="44" height="44" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 5l15 5v11c0 9-6 16-15 20C15 37 9 30 9 21V10z"/><rect x="18" y="21" width="12" height="9" rx="2"/><path d="M20 21v-3a4 4 0 0 1 8 0v3"/></svg>
+            <h3>Car Security Systems</h3>
+            <p>Alarms, GPS trackers, immobilisers, cameras and sensors to protect your vehicle around the clock.</p>
+          </article>
+          <article class="card reveal" data-cat="tech">
+            <span class="cardnum">11</span>
+            <svg viewBox="0 0 48 48" width="44" height="44" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="14" width="26" height="18" rx="3"/><path d="M32 21l9-4v14l-9-4z"/><circle cx="19" cy="23" r="5"/></svg>
+            <h3>Dash Cameras and Fleet Tracking</h3>
+            <p>4G dash cameras with live remote viewing from your phone or PC, ideal for taxis, vans and buses.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="support">
+      <div class="wrap">
+        <header class="sechead reveal">
+          <p class="eyebrow">Sales, installation, servicing, support</p>
+          <h2>Everything under one roof</h2>
+          <p>Premium products, professional installation and expert technicians for every vehicle type, with after sales support when you need it.</p>
+        </header>
+        <div class="packgrid">
+          <div class="pack reveal"><svg viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 10h6l5 22h22l4-16H14"/><circle cx="20" cy="40" r="3"/><circle cx="36" cy="40" r="3"/></svg><h3>Sales</h3><p>Premium products supplied for your vehicle.</p></div>
+          <div class="pack reveal"><svg viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 38l16-16M30 8a8 8 0 0 0-9 11L8 32a4 4 0 0 0 8 8l13-13a8 8 0 0 0 11-9l-6 6-5-1-1-5z"/></svg><h3>Installation</h3><p>Professional installation by expert technicians.</p></div>
+          <div class="pack reveal"><svg viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="8"/><path d="M24 4v6M24 38v6M4 24h6M38 24h6M10 10l4 4M34 34l4 4M38 10l-4 4M14 34l-4 4"/></svg><h3>Servicing</h3><p>Servicing and upkeep to keep your vehicle at its best.</p></div>
+          <div class="pack reveal"><svg viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 28v-6a16 16 0 0 1 32 0v6"/><rect x="6" y="26" width="8" height="12" rx="3"/><rect x="34" y="26" width="8" height="12" rx="3"/><path d="M40 38c0 4-4 5-9 5"/></svg><h3>Support</h3><p>After sales support after the work is done.</p></div>
+        </div>
+
+        <div class="brandbox reveal">
+          <p class="small pmlabel">Compatible with all vehicle brands</p>
+          <div class="brandrow"><span>BMW</span><span>Mercedes Benz</span><span>Audi</span><span>Toyota</span><span>Lexus</span><span>Volkswagen</span><span>Nissan</span><span>Honda</span><span>Ford</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="wrap">
+        <header class="sechead reveal">
+          <p class="eyebrow">How it works</p>
+          <h2>A straightforward customer experience</h2>
+        </header>
+        <ol class="steps">
+          <li class="reveal"><span>1</span><h3>Consult</h3><p>Tell us about your vehicle and the outcome you want.</p></li>
+          <li class="reveal"><span>2</span><h3>Plan</h3><p>We confirm scope, materials, timelines and pricing with you.</p></li>
+          <li class="reveal"><span>3</span><h3>Create</h3><p>Careful workmanship with close attention to the finish.</p></li>
+          <li class="reveal"><span>4</span><h3>Handover</h3><p>Collect a vehicle that looks and feels refreshed.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap ctarow">
+        <h2 class="reveal">Ready to customize, refresh or restore your vehicle?</h2>
+        <a class="btn btnlight reveal" href="contact.html">Request a Quote</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footgrid">
+      <div class="footbrand">
+        <a class="footlogo" href="index.html" aria-label="AutoHub home"><span class="footmark"><b>A</b><img src="images/logo.png" alt="" width="142" height="34" onload="this.parentNode.classList.add('hasimg')" onerror="this.remove()"></span><strong>AUTOHUB</strong></a>
+        <p class="footmotto">Everything Automotive</p>
+        <p>Car customization, repairs, detailing and restoration in Borrowdale, Harare.</p>
+      </div>
+      <nav class="footcol" aria-label="Footer navigation">
+        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="bodykits.html">Body Kits</a>
+        <a href="products.html">Products</a>
+        <a href="shipping.html">Shipping</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="footcol">
+        <h4>Contact</h4>
+        <span>Borrowdale, Harare</span>
+        <a href="tel:+447404100434">+44 7404 100434</a>
+        <a href="tel:+263773963182">+263 77 396 3182</a>
+        <a href="tel:+263782406918">+263 782 406 918</a>
+        <a href="tel:+263789010987">+263 7 89010987</a>
+      </div>
+    </div>
+    <div class="footbar">
+      <div class="wrap footbarrow">
+        <p>&copy; <span id="year"></span> AutoHub. All rights reserved.</p>
+        <p>Service availability, pricing and timelines are confirmed directly.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/263773963182" target="_blank" rel="noopener" aria-label="Chat with AutoHub on WhatsApp">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.400 7.800L3 21l1.300-4.400A9 9 0 1 1 21 12z"/><path d="M9 9c0 3.500 2.500 6 6 6l1.200-1.700-2.200-1-.9.800c-1-.4-1.800-1.200-2.200-2.200l.8-.9-1-2.200z"/></svg>
+  </a>
+  <button class="totop" id="toTop" type="button" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.500" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>

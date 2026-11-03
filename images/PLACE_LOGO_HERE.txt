@@ -1,0 +1,2 @@
+images/logo.png is the AutoHub logo, cropped from your product photos.
+Replace it with a cleaner file (transparent PNG about 300px wide) any time. Keep the name logo.png.
