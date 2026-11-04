@@ -1145,5 +1145,6 @@ h3 { font-weight: 600; font-size: 1rem; }
 .adminlink svg { transition: transform 0.3s var(--ease); }
 .adminlink:hover svg { transform: scale(1.1); }
 @media (max-width: 600px) {
-  .adminlink { display: none; }
+  .adminlink { width: 34px; height: 34px; border-radius: 9px; }
+  .adminlink svg { width: 16px; height: 16px; }
 }
