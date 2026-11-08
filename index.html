@@ -3,13 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AutoHub | Everything Automotive, Borrowdale, Harare</title>
-  <meta name="description" content="AutoHub in Borrowdale, Harare: car customization, body kits, detailing, panel beating, respray, wrapping, interiors, mag wheels, bucket seats, engine enhancement, car security and dash cameras.">
+  <title>Auto Customization in Harare | AutoHub</title>
+  <meta name="description" content="Body kits, detailing, respray, wraps and wheels in Borrowdale, Harare. Refresh your car with AutoHub. Request a free quote today.">
   <meta name="theme-color" content="#0a0a0a">
+  <meta name="google-site-verification" content="YOUR_GOOGLE_SITE_VERIFICATION_CODE">
   <link rel="icon" href="images/logo.png">
   <link rel="stylesheet" href="styles.css">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
-    /* Set theme before paint to avoid a flash */
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <script>
     (function () {
       try {
         var saved = localStorage.getItem("autohubTheme");
@@ -63,12 +71,8 @@
     <section class="hero" id="top">
       <div class="herobg" aria-hidden="true">
         <i class="slide on" style="--img:url(images/hero-car.jpg)"><img src="images/hero-car.jpg" alt=""></i>
-        <!-- <i class="slide" style="--img:url(images/hero-kit.jpg)"><img src="images/hero-kit.jpg" alt=""></i>
-        <i class="slide" style="--img:url(images/dash-cam.jpeg)"><img src="images/dash-cam.jpeg" alt=""></i> -->
         <i class="slide" style="--img:url(images/engine.jpeg)"><img src="images/engine.jpeg" alt=""></i>
-        <!-- <i class="slide" style="--img:url(images/security.jpeg)"><img src="images/security.jpeg" alt=""></i> -->
         <i class="slide" style="--img:url(images/steering.jpeg)"><img src="images/steering.jpeg" alt=""></i>
-        <!-- <i class="slide" style="--img:url(images/hero-ship.jpg)"><img src="images/hero-ship.jpg" alt=""></i> -->
         <i class="slide" style="--img:url(images/hero-paint.jpg)"><img src="images/hero-paint.jpg" alt=""></i>
         <i class="slide" style="--img:url(images/hero-wheels.jpg)"><img src="images/hero-wheels.jpg" alt=""></i>
       </div>
@@ -76,18 +80,12 @@
       <span class="streak s2" aria-hidden="true"></span>
       <span class="streak s3" aria-hidden="true"></span>
       <span class="streak s4" aria-hidden="true"></span>
-      <!-- <span class="streak s5" aria-hidden="true"></span>
-      <span class="streak s6" aria-hidden="true"></span>
-      <span class="streak s7" aria-hidden="true"></span> -->
       <div class="herodots" role="group" aria-label="Choose hero picture">
         <button type="button" class="hdot on" aria-label="Show picture 1"></button>
         <button type="button" class="hdot" aria-label="Show picture 2"></button>
         <button type="button" class="hdot" aria-label="Show picture 3"></button>
         <button type="button" class="hdot" aria-label="Show picture 4"></button>
         <button type="button" class="hdot" aria-label="Show picture 5"></button>
-        <!-- <button type="button" class="hdot" aria-label="Show picture 6"></button> -->
-        <!-- <button type="button" class="hdot" aria-label="Show picture 7"></button>
-        <button type="button" class="hdot" aria-label="Show picture 8"></button> -->
       </div>
       <div class="wrap herogrid">
         <div class="herocopy">
@@ -221,6 +219,7 @@
         <a href="shipping.html">Shipping</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy</a>
       </nav>
       <div class="footcol">
         <h4>Contact</h4>
@@ -236,10 +235,13 @@
         <p>&copy; <span id="year"></span> AutoHub. All rights reserved.</p>
         <p>Service availability, pricing and timelines are confirmed directly.</p>
       </div>
+      <div class="wrap footcredit">
+        <p>Website Designed &amp; Developed By <a href="https://mengez-emzet.github.io/mengezemzet.co.zw/" target="_blank" rel="noopener">Mengez_Emzet</a></p>
+      </div>
     </div>
   </footer>
 
-  <a class="whatsapp" href="https://wa.me/263773963182" target="_blank" rel="noopener" aria-label="Chat with AutoHub on WhatsApp">
+  <a class="whatsapp" href="https://wa.me/263782406918" target="_blank" rel="noopener" aria-label="Chat with AutoHub on WhatsApp">
     <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.400 7.800L3 21l1.300-4.400A9 9 0 1 1 21 12z"/><path d="M9 9c0 3.500 2.500 6 6 6l1.200-1.700-2.200-1-.9.800c-1-.4-1.800-1.200-2.200-2.200l.8-.9-1-2.200z"/></svg>
   </a>
   <button class="totop" id="toTop" type="button" aria-label="Back to top">
