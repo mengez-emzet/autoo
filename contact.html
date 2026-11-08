@@ -9,13 +9,27 @@
   <meta name="google-site-verification" content="YOUR_GOOGLE_SITE_VERIFICATION_CODE">
   <link rel="icon" href="images/logo.png">
   <link rel="stylesheet" href="styles.css">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
+    <!-- Google Analytics with Consent Mode -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X2MT2DSR04"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      
+      // Default to denied until the user accepts
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied'
+      });
+  
+      gtag('js', new Date());
+      gtag('config', 'G-X2MT2DSR04');
+  
+      // Check if they already accepted previously
+      try {
+        if (localStorage.getItem('autohubCookieConsent') === 'accepted') {
+          gtag('consent', 'update', { 'analytics_storage': 'granted' });
+        }
+      } catch (e) {}
+    </script>
   <script>
     (function () {
       try {

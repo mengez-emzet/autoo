@@ -734,3 +734,41 @@
   var year = $("#year");
   if (year) year.textContent = new Date().getFullYear();
 })();
+
+  /* ===== Cookie Consent Banner ===== */
+  var cookieConsent = localStorage.getItem('autohubCookieConsent');
+
+  // Only show the banner if they haven't made a choice yet
+  if (!cookieConsent) {
+    var banner = document.createElement('div');
+    banner.className = 'cookie-banner';
+    banner.innerHTML = `
+      <p>We use cookies to analyze traffic and improve your experience. By clicking "Accept", you consent to our use of cookies as described in our <a href="privacy.html">Privacy Policy</a>.</p>
+      <div class="cookie-btns">
+        <button class="cookie-btn deny" id="cookieDeny">Deny</button>
+        <button class="cookie-btn accept" id="cookieAccept">Accept</button>
+      </div>
+    `;
+    document.body.appendChild(banner);
+
+    // Small delay before showing so it slides in nicely after page load
+    setTimeout(function () { banner.classList.add('show'); }, 1500);
+
+    // Handle Accept
+    document.getElementById('cookieAccept').addEventListener('click', function () {
+      localStorage.setItem('autohubCookieConsent', 'accepted');
+      banner.classList.remove('show');
+      
+      // Tell Google Analytics it's allowed to track
+      if (typeof gtag === 'function') {
+        gtag('consent', 'update', { 'analytics_storage': 'granted' });
+      }
+    });
+
+    // Handle Deny
+    document.getElementById('cookieDeny').addEventListener('click', function () {
+      localStorage.setItem('autohubCookieConsent', 'denied');
+      banner.classList.remove('show');
+      // Google Analytics remains denied by default
+    });
+  }
