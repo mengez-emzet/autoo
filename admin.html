@@ -44,9 +44,8 @@
     <!-- Shown until firebase-config.js is filled in -->
     <section class="admincard" id="setup" hidden>
       <h1>Admin setup needed</h1>
-      <p>The dashboard needs a free Firebase project for the secure sign in and to store the products. Nothing has been connected yet.</p>
+      <p>The dashboard needs a database for the secure sign in and to store the products. Nothing has been connected yet.</p>
       <ol class="setuplist">
-        <li>Open <b>ADMIN_SETUP.md</b> in the project folder and follow the steps (about 10 minutes).</li>
         <li>Paste your Firebase values into <b>firebase-config.js</b>.</li>
         <li>Upload the project again and refresh this page.</li>
       </ol>
@@ -83,7 +82,7 @@
       <div class="dashhead">
         <div>
           <h1>Products</h1>
-          <p class="muted">Add a product here and it appears on the Products page straight away, in the same format as the others.</p>
+          <p class="muted">Add a product here and it appears on the Products page straight away.</p>
         </div>
         <button class="btn btnred" type="button" id="newBtn">Add new product</button>
       </div>
@@ -165,7 +164,6 @@
             <div class="listhead">
               <h2>Added products <span class="pill" id="countPill">0</span></h2>
             </div>
-            <p class="small">Products built into the website are not listed here. Only products added from this dashboard can be edited or removed.</p>
             <ul class="adminlist" id="adminList"></ul>
           </div>
         </div>
