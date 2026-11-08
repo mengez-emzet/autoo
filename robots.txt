@@ -1,0 +1,10 @@
+# robots.txt for AutoHub
+User-agent: *
+Allow: /
+Disallow: /admin.html
+Disallow: /admin.css
+Disallow: /admin.js
+Disallow: /firebase-config.js
+Disallow: /store.js
+
+Sitemap: https://autohub.co.zw/sitemap.xml
