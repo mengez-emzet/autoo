@@ -107,8 +107,8 @@
         var email = $("#lEmail").value.trim();
         if (!email) { loginError("Type your email above first, then press Forgot password."); return; }
         authM.sendPasswordResetEmail(auth, email).then(function () {
-          loginError(""); toast("If that email is an admin account, a reset link has been sent.");
-        }, function () { toast("If that email is an admin account, a reset link has been sent."); });
+          loginError(""); toast("A reset link has been sent to your email.");
+        }, function () { toast("A reset link has been sent to your email."); });
       });
   
       $("#signOut").addEventListener("click", function () { authM.signOut(auth); });
