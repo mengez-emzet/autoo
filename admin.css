@@ -119,3 +119,12 @@
 
 /* A little red "hot" ring that pulses on the input while the password is visible */
 .passwrap.revealed input { border-color: var(--red); box-shadow: 0 0 0 3px color-mix(in srgb, var(--red) 22%, transparent); }
+
+/* Success message styling */
+.error.success {
+  color: #4ade80 !important; /* A nice bright green */
+  background: rgba(74, 222, 128, 0.1);
+  padding: 8px 12px;
+  border-radius: 8px;
+  border-left: 4px solid #4ade80;
+}

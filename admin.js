@@ -70,12 +70,18 @@
         ev.preventDefault();
         var email = $("#lEmail").value.trim(), pass = $("#lPass").value;
         if (!email || !pass) { loginError("Enter your email and password."); return; }
+        
         loginError("");
         $("#loginBtn").disabled = true;
-        authM.signInWithEmailAndPassword(auth, email, pass).catch(function (err) {
-          var code = err && err.code || "";
-          loginError(/too-many/.test(code) ? "Too many attempts. Wait a few minutes and try again." : "That email or password is not correct.");
-        }).then(function () {
+        
+        authM.signInWithEmailAndPassword(auth, email, pass).then(function () {
+          // SUCCESS: Show green message and clear the password field
+          var errEl = $("#loginError");
+          errEl.textContent = "Login successful! Loading dashboard...";
+          errEl.classList.add("success");
+          show(errEl, true);
+          
+          // Reset the password field
           $("#loginBtn").disabled = false;
           $("#lPass").value = "";
           $("#lPass").type = "password";
@@ -83,6 +89,17 @@
           $("#passToggle").classList.remove("on");
           $("#passToggle").setAttribute("aria-pressed", "false");
           $("#passToggle").setAttribute("aria-label", "Show password");
+          
+        }).catch(function (err) {
+          // FAILURE: Show red message, but KEEP the password in the field
+          var code = err && err.code || "";
+          var errEl = $("#loginError");
+          errEl.classList.remove("success");
+          errEl.textContent = /too-many/.test(code) ? "Too many attempts. Wait a few minutes and try again." : "That email or password is not correct.";
+          show(errEl, true);
+          
+          // Re-enable the button, but leave the password alone
+          $("#loginBtn").disabled = false;
         });
       });
   
@@ -110,6 +127,11 @@
           clearTimeout(idleTimer);
           show($("#dash"), false); show($("#login"), true);
           show($("#signOut"), false); show($("#adminUser"), false);
+          
+          // ADD THESE TWO LINES:
+          $("#loginError").classList.remove("success");
+          show($("#loginError"), false);
+          
           return;
         }
         /* confirm this account is an admin before showing anything */
